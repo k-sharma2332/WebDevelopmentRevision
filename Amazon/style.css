@@ -1,0 +1,268 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #e2e7e6;
+    color: #0f1111;
+}
+
+.navbar {
+    min-height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo {
+    background-image: url("amazon.logo.png");
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.border {
+    border: 1.5px solid transparent;
+}
+
+.border:hover {
+    border-color: white;
+}
+
+.add-first {
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+}
+
+.add-sec {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search {
+    display: flex;
+    width: 620px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.search-select {
+    width: 80px;
+    padding: 0 0.75rem;
+    border: none;
+    background-color: #f3f3f3;
+    color: #0f1111;
+}
+
+.search-input {
+    flex: 1;
+    font-size: 1rem;
+    border: none;
+    padding: 0 0.75rem;
+}
+
+.search-input:focus,
+.search-select:focus,
+.search-icon:focus {
+    outline: 2px solid #febd69;
+}
+
+.nav-search:hover {
+    box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.3);
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    background-color: #febd69;
+    color: #0f1111;
+    border: none;
+    cursor: pointer;
+}
+
+span {
+    font-size: 0.7rem;
+}
+
+.nav-second {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i {
+    font-size: 1.2rem;
+}
+
+.panel {
+    min-height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.panel-all {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.panel-ops {
+    width: 70%;
+    font-size: 0.85rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.panel-ops p {
+    margin: 0;
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.hero-section {
+    background-image: url("hero_image.jpg");
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-msg {
+    background-color: white;
+    color: black;
+    width: 80%;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.hero-msg a {
+    color: #007185;
+    text-decoration: none;
+}
+
+.hero-msg a:hover {
+    text-decoration: underline;
+}
+
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1.5rem 1rem 2rem;
+}
+
+.box {
+    border: 2px solid black;
+    width: 23%;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box-content {
+    padding: 1rem;
+}
+
+.box-content h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.box-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.box-content p {
+    display: inline-block;
+    background-color: #007185;
+    color: #ffffff;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1100px) {
+    .nav-search {
+        width: 100%;
+    }
+
+    .box {
+        width: 48%;
+    }
+}
+
+@media (max-width: 720px) {
+    .navbar,
+    .panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .panel-ops {
+        width: 100%;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
