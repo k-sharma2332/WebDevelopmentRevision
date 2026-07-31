@@ -129,3 +129,63 @@ let res = set2.concat(set1);
 console.log(res);
 console.log(str.replace("n","k"));
 console.log(str.charAt(0));
+// Array - collection of items
+let marks = [90,34,23,45,41];
+let info = ["khushi",86,"Rishikesh"];
+console.log(info);
+console.log(info.length());
+// array is basically object
+//Array indices = arr[0],arr[1]..........
+console.log(arr[0]);
+arr[0] = 45;
+console.log(arr[0]);
+// strings = immutable that means cant't change
+// array = mutable that means change
+//Looping over an array
+// for loop = use length  for(let idx=0;idx<=ar.length;idx++){}
+for(let idx=0;idx<marks.length;idx++){
+    console.log(marks[0]);
+}
+// for of
+for(let mark of marks){
+    console.log(marks);
+}
+let sum=0;
+for(let val of marks){
+    sum+=val;
+}
+let avg = sum/marks.length;
+console.log(avg);
+
+// Array methods
+// 1.push = add to end
+// 2.pop = delete from end and return
+// 3. toStrinf = converts array to string
+// 4. concat = joind multiple array and return result
+// 5. unshift = add to start
+// 6. shift = delete from start and return
+// 7. slice = return a piece of the array
+// 8. Splice = change original array (add,rmove,replace)
+let fooditems = ["grapes","bnana","lithici","apple"];
+fooditems.pop();
+console.log(fooditems);
+fooditems.push("byy");
+console.log(fooditems);
+fooditems.toString();
+console.log(fooditems);
+let marvel = ["thor","spiderman","antman","drstrange"];
+let dchero = ["batman","ironman"];
+
+let heros = marvel.concat(dchero);
+console.log(heros);
+
+marvel.shift();
+console.log(marvel);
+marvel.unshift();
+console.log(marvel);
+console.log(marvel.slice(1,3));
+console.log(marks.splice(2,2,101,122));
+
+
+
+
