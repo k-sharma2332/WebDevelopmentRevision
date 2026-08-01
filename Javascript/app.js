@@ -133,12 +133,12 @@ console.log(str.charAt(0));
 let marks = [90,34,23,45,41];
 let info = ["khushi",86,"Rishikesh"];
 console.log(info);
-console.log(info.length());
+//
 // array is basically object
 //Array indices = arr[0],arr[1]..........
-console.log(arr[0]);
-arr[0] = 45;
-console.log(arr[0]);
+console.log(marks[0]);
+marks[0] = 45;
+console.log(marks[0]);
 // strings = immutable that means cant't change
 // array = mutable that means change
 //Looping over an array
@@ -187,5 +187,69 @@ console.log(marvel.slice(1,3));
 console.log(marks.splice(2,2,101,122));
 
 
+// functions = block of code designed to perform a particular task
+function myFunction(MSG) { //PARAMETER = INPUT
+    console.log(MSG);
+}
+myFunction("this is my function"); // function call
+//it prevent from writing same code again and again redundacy
+
+function sm(a,b){ //local variable - > scope
+    console.log(a+b);
+}
+sm(19,34); //ARGUMENT = INPUT
+
+//Arrow functions comapct way of writing a function
+// const functionName = (a,b) => {
+    
+// }
+const arrowsm = (a,b) => {
+    console.log(a+b);
+}
+
+arrowsm(2,3);
+
+function countVowels(str){
+    let count=0;
+    for(const char of str){
+        if(char==="a"|| char==="e"||char==="i"||char==="o"||char==="u"){
+            count++;
+        }
+    }
+    return count;
+}
+// for each loop in Array - arr.ForEach(callBackfunction)
+// callbackFuntion: here, it is a funtion to execute for each element in the array
+// A callback is a function passed as an argument to another funtion
+let ar = [1,2,3,4,5];
+
+arrowsm.forEach((val,idx)=>{
+    console.log(val,idx);
+})
+
+// map method - creates new array with the result of some operation. The value its callback returns are used to form new array
+let num = [32,43,54,45];
+nums.map((val) => {
+    console.log(val);
+});
+
+let newArr = nums.map((val) => {
+    return val*2;
+});
+console.log(newArr);
+
+// filter method = create a new array of element that give true for a condition
+
+let evern = nums.filter((val)=>{
+    return val>3;
+});
+console.log(evenArr);
 
 
+// reduce = perform some operations amd reduces the array to a single value. it return that single calue
+const output = nums.reduce((res,cur)=>{
+    return res+cur;
+})
+ console.log(output);
+
+ 
