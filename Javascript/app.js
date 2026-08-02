@@ -203,57 +203,57 @@ sm(19,34); //ARGUMENT = INPUT
 // const functionName = (a,b) => {
     
 // }
-const arrowsm = (a,b) => {
-    console.log(a+b);
-}
+// const arrowsm = (a,b) => {
+//     console.log(a+b);
+// }
 
-arrowsm(2,3);
+// arrowsm(2,3);
 
-function countVowels(str){
-    let count=0;
-    for(const char of str){
-        if(char==="a"|| char==="e"||char==="i"||char==="o"||char==="u"){
-            count++;
-        }
-    }
-    return count;
-}
-// for each loop in Array - arr.ForEach(callBackfunction)
-// callbackFuntion: here, it is a funtion to execute for each element in the array
-// A callback is a function passed as an argument to another funtion
-let ar = [1,2,3,4,5];
+// function countVowels(str){
+//     let count=0;
+//     for(const char of str){
+//         if(char==="a"|| char==="e"||char==="i"||char==="o"||char==="u"){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// // for each loop in Array - arr.ForEach(callBackfunction)
+// // callbackFuntion: here, it is a funtion to execute for each element in the array
+// // A callback is a function passed as an argument to another funtion
+// let ar = [1,2,3,4,5];
 
-arrowsm.forEach((val,idx)=>{
-    console.log(val,idx);
-})
+// arrowsm.forEach((val,idx)=>{
+//     console.log(val,idx);
+// })
 
-// map method - creates new array with the result of some operation. The value its callback returns are used to form new array
-let num = [32,43,54,45];
-nums.map((val) => {
-    console.log(val);
-});
+// // map method - creates new array with the result of some operation. The value its callback returns are used to form new array
+// let num = [32,43,54,45];
+// nums.map((val) => {
+//     console.log(val);
+// });
 
-let newArr = nums.map((val) => {
-    return val*2;
-});
-console.log(newArr);
+// let newArr = nums.map((val) => {
+//     return val*2;
+// });
+// console.log(newArr);
 
-// filter method = create a new array of element that give true for a condition
+// // filter method = create a new array of element that give true for a condition
 
-let evern = nums.filter((val)=>{
-    return val>3;
-});
-console.log(evenArr);
+// let evern = nums.filter((val)=>{
+//     return val>3;
+// });
+// console.log(evenArr);
 
 
-// reduce = perform some operations amd reduces the array to a single value. it return that single calue
-const output = nums.reduce((res,cur)=>{
-    return res+cur;
-})
- console.log(output);
-console.log(window.document);
+// // reduce = perform some operations amd reduces the array to a single value. it return that single calue
+// const output = nums.reduce((res,cur)=>{
+//     return res+cur;
+// })
+//  console.log(output);
+// console.log(window.document);
 
-//DOM(Document Object Model) - When a web page is laoded, the browser creates a document object model of the page.
+// DOM(Document Object Model) - When a web page is laoded, the browser creates a document object model of the page.
 // Basically it's a method to access html into javascript file in which we can see the window , document , html , head, body , and what inside them.
 // DOM Manipulation - 
 // SELECTING WITH ID : const Id = document.getElementById("ID")
@@ -263,26 +263,69 @@ console.log(window.document);
 // document.querySelector("myId/myClass/tag") - return first element
 // document.querySelectorAll("myId/myClass/tag") - return a Nodelist
 
-//Properties 
+// Properties 
 // tagName - return tag for element node
 // innerText - return the text content of the element and all its children
 // innerHTML - return the plain text or HTML content in the element
 // textContent - return textual content even for hidden element
 
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click me";
+
+newBtn.style.color = "white";
+newBtn.style.backgroundColor = "red";
+
+document.querySelector("body").prepend(newBtn);
+
+// Attributes
+// getAttribute(attr) - get the attribute value
+// setAttribute(attr,value) - to set the attribute value
+// style 
+// node.style - div.style.backgroundcolor = "green"
+// Insert element - let el = document.createElement("div")
+// node.append(el) - adds at the end of node(inside)
+// node.prepend(el) - adds at the start of node(inside)
+// node.before(el) - adds before the node(outside)
+// node.after(el) - adds after the node(outside)\
+// Delete Element
+// node.remove() // remove the node
+
+//Events in js - The change in the state of an object is known as an event
+// Mouse event, keyboard event, form event, print event
 
 
 
 
+// Js handling
+let btn1 = document.querySelector("#btn1");
+// btn1.onClick = () =>{
+//     console.log("btn1 was clicked");
+//     let a = 25;
+//     a++;
+//     console.log(a) //26
+// };
+
+// let box = document.querySelector("div");
+// div.onmouseover = () => {
+//     console.log("You are inside a div");
+// }
 
 
+btn1.addEventListener("click",(evt) =>{
+    console.log("button1 was clicked- handler1");
+    console.log(evt);
+});
 
+btn1.addEventListener("click",() => {
+    console.log("button1 was clicked - handler2");
+});
+const handler3 = () => {
+    console.log("button1 was clicked - handled3");
+}
 
-
-
-
-
-
-
+btn1.removeEventListener("click",()=>{
+    console.log("button was click");
+})
 
 
 
