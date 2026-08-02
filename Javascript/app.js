@@ -251,5 +251,52 @@ const output = nums.reduce((res,cur)=>{
     return res+cur;
 })
  console.log(output);
+console.log(window.document);
+
+//DOM(Document Object Model) - When a web page is laoded, the browser creates a document object model of the page.
+// Basically it's a method to access html into javascript file in which we can see the window , document , html , head, body , and what inside them.
+// DOM Manipulation - 
+// SELECTING WITH ID : const Id = document.getElementById("ID")
+// SELECTING WITH CLASS : document.getElementsByClassName("myClass") - return html collection
+// SELECTING WITH TAG : document.getElementsByTagName("p")
+// Query selector
+// document.querySelector("myId/myClass/tag") - return first element
+// document.querySelectorAll("myId/myClass/tag") - return a Nodelist
+
+//Properties 
+// tagName - return tag for element node
+// innerText - return the text content of the element and all its children
+// innerHTML - return the plain text or HTML content in the element
+// textContent - return textual content even for hidden element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
