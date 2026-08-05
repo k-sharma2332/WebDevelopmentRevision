@@ -328,18 +328,86 @@ btn1.removeEventListener("click",()=>{
 })
 
 
+//classes and objects
+//objects are instances of classes. A class is a blueprint for creating objects. It defines the properties and methods that the objects created from the class will have. In JavaScript, classes were introduced in ECMAScript 6 (ES6) and provide a more structured way to create objects and deal with inheritance.
+const student = {
+    name: "khushi",
+    age: 20,
+    marks: 85,
+    printMarks: function(){
+        console.log("Marks printed", this.marks); //this means the current object
+    }
+}
 
+// Prototype in javascript is a mechanism by which objects can inherit properties and methods from other objects. Every JavaScript object has an internal property called [[Prototype]], which refers to another object. This prototype object can have its own properties and methods, and when you try to access a property or method on an object, JavaScript will look for it on the object itself first, and if it doesn't find it, it will look up the prototype chain until it finds the property or reaches the end of the chain (null).
+const employee = {
+    caltax() {
+        console.log("tak rate");
+    },
+    calctax2: function() {
+        console.log("tax rate 2");
+    }
+};
 
+const manager = {
+    salary: 50000,
+}
 
+manager.__proto__ = employee; // Setting the prototype of manager to employee
 
+//classes in javascript -  classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JavaScript are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.
+class Toyata{
+    constructor(){
+        this.name = "fortuner";
+        this.model = 2023;
+    }
+    start(){
+        console.log("car started");
+    }
+    stop(){
+        console.log("car stopped");
+    }
+}
 
+let fortuner = new Toyata();
 
+//ineheritence
+class parent{
+    constructor(){
+        this.name = "parent";
+    }
+    hello(){
+        console.log("hello from parent");
+    }
+}
 
+class child extends parent{
+    constructor(){
+        super(); // Call the parent class constructor
+  
+        this.name = "child";
+    }
+    hi(){
+        console.log("hi from child");
+    }
+}
+let obj = new child();
+obj.hi();
+obj.hello();
 
+let e = 5;
+let f = 10;
+console.log(e);
+console.log(f);
+try{
+    console.log(e+d);
+}catch(err){
+    console.log("error occured",err);
+}
+ //error so we use error handling because d is not definedand after that all other line also can't work
+console.log(e-f);
+console.log(e*f);
+console.log(e/f);
+console.log(e%f);
+console.log(e**f);
 
-
-
-
-
-
- 
