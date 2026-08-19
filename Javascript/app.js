@@ -411,3 +411,88 @@ console.log(e/f);
 console.log(e%f);
 console.log(e**f);
 
+//synchronous and asynchronous - when a program executes tasks one after another in a sequential manner, it is called synchronous execution. In synchronous execution, each task must complete before the next one starts. This can lead to blocking behavior if a task takes a long time to complete, as subsequent tasks have to wait for it to finish.
+function hello(){
+    console.log("hello");
+}
+setTimeout(hello,4000);
+
+//callback
+function summ(a,b){
+    console.log(a+b);
+}
+
+function calculator(a,b,sumcallback){
+    sumcallback(a,b);
+}
+
+calculator(1,2,()=>{
+    console.log(a+b);
+})
+
+const hello = () =>{
+    console.log("hello");
+}
+
+setTimeout(hello,3000); 
+
+let agee = 19;
+if(age>=18){
+    if(age>=60){
+        console.log("senior");
+    } else {
+        console.log("middle");
+    }
+
+}else{
+    console.log("not young");
+}
+
+function getData(dataId,getNextData) { //it will take 2 secon to send data so we use settimeout
+    setTimeout(()=>{
+        console.log("data",dataId);
+        getNextData();
+    },2000);    
+}
+
+//data1 then data3 
+getData(1,()=>{
+    getData(2)
+});
+//callback hell = pyramid of doom or nested callback
+getData(1,() =>{
+    console.log("getting data ....");
+    getData(2,()=>{
+        console.log("getting data 2...");
+        getData(3,()=>{
+            console.log("getting data4....");
+            getData(4);
+        });
+    });
+});
+
+//promises
+let promise = new Promise((resolve,reject) =>{
+    console.log("promise");
+    resolve(1234); //also we can use reject who rejct the promise//to resolve or fullfill promise
+})
+
+const getpromise = () => {
+    return new promise((resolve,reject)=>{
+        console.log("I am promise");
+        resolve("success");
+    });
+};
+
+let promise = getpromise();
+promise.then(()=>{
+    console.log("fulfilled");
+});
+promise.catch((err) =>{
+    console.log("reject",err);
+}); 
+
+// promise chain
+function asyncFunc(){
+    return new Promise
+}
