@@ -436,9 +436,9 @@ const hello = () =>{
 
 setTimeout(hello,3000); 
 
-let agee = 19;
-if(age>=18){
-    if(age>=60){
+let ageee = 19;
+if(ageee>=18){
+    if(ageee>=60){
         console.log("senior");
     } else {
         console.log("middle");
@@ -484,7 +484,7 @@ const getpromise = () => {
     });
 };
 
-let promise = getpromise();
+let Promise = getpromise();
 promise.then(()=>{
     console.log("fulfilled");
 });
@@ -496,3 +496,24 @@ promise.catch((err) =>{
 function asyncFunc(){
     return new Promise
 }
+
+function api(){
+    return new Promise((resolve,reject) =>{
+        setTimeout(()=>{
+            console.log("weather data");
+        resolve(200);
+        },2000);
+    });
+}
+
+async function getWeatherData() {
+    await api();
+}
+
+//async - await
+(async function getAllData(){
+    await getData(1);
+    await getData(2);
+})(); //iife activvate immediately 
+
+// IIFE - IIFE is a function that is called immediately as soon as it defined (function () { //}) ();
